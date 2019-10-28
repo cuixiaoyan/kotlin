@@ -44,6 +44,15 @@ fun main(args: Array<String>) {
     println("takeLast--返回从最后一个开始的n个元素:" + list.takeLast(2))
     println("takeWhile--返回不满足条件的下标前面的所有元素的集合:" + list.takeWhile { it < 3 })
 
+    /**
+     * 映射操作
+     */
+    println("flatMap--合并两个集合，可以在合并的时候对迭代元素值it多想要的操作:" + list.flatMap { listOf(it, it + 1) })
+    println("groupBy--将集合中的元素按照某个条件分组，返回Map:" + list.groupBy { if (it % 2 == 0) "even" else "odd" })
+    println("map--将集合中的元素通过某个方法转换后的结果存到一个集合中:" + list.map { it * 2 })
+    println("mapIndexed--除了得到转换后的结果，还可以拿到index(下标):" + list.mapIndexed { index, it -> index * it })
+    println("mapNotNull--执行方法转换前过滤掉为null的元素:" + list.mapNotNull { it * 2 })
+
 
 
 
