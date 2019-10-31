@@ -53,6 +53,32 @@ fun main(args: Array<String>) {
     println("mapIndexed--除了得到转换后的结果，还可以拿到index(下标):" + list.mapIndexed { index, it -> index * it })
     println("mapNotNull--执行方法转换前过滤掉为null的元素:" + list.mapNotNull { it * 2 })
 
+    /**
+     * 元素操作
+     */
+    println("contains--判断集合中是否有指定元素，有则返回true：" + list.contains(2))
+    println("elementAt--查找下标对应的元素，如果下标越界会抛IndexOutOfBoundsException异常:" + list.elementAt(1))
+    println("elementAtOrElse--查找下标对应元素，如果越界会根据方法返回默认值(最大下标经方法后的值):" + list.elementAtOrElse(10, { 2 * it }))
+    println("elementAtOrNull--查找下标对应元素，越界会返回Null:" + list.elementAtOrNull(10))
+    println("first--返回符合条件的第一个元素，没有则会抛NoSuchElementException异常:" + list.first { it % 2 == 0 })
+    println("firstOrNull--返回符合条件的第一个元素，没有返回null:" + list.firstOrNull() { it % 2 == 10 })
+    println("indexOf--返回指定下标的元素，没有返回-1:" + list.indexOf(4))
+    println("indexOfFirst--返回第一个符合条件的元素下标，没有返回-1:" + list.indexOfFirst { it % 2 == 0 })
+    println("indexOfLast--返回最后一个符合条件的元素下标，没有返回-1:" + list.indexOfLast { it % 2 == 0 })
+    println("last--返回符合条件的最后一个元素，没有则会抛NoSuchElementException异常:" + list.last { it % 2 == 0 })
+    println("lastIndexOf--返回符合条件的最后一个元素，没有返回-1:" + list.lastIndexOf(5))
+    println("lastOrNull--返回符合条件的最后一个元素，没有返回null:" + list.lastOrNull { it % 2 == 10 })
+    println("single--返回符合条件的单个元素，如有没有符合的或符合超过一个分别会抛NoSuchElementException或IllegalArgumentException异常:" + list.single { it % 6 == 5 })
+    println("singleOrNull--返回符合条件的单个元素，如有没有符合或超过一个，返回null:" + list.singleOrNull() { it % 5 == 10 })
+
+
+
+
+
+
+
+
+
 
 
 
