@@ -71,6 +71,14 @@ fun main(args: Array<String>) {
     println("single--返回符合条件的单个元素，如有没有符合的或符合超过一个分别会抛NoSuchElementException或IllegalArgumentException异常:" + list.single { it % 6 == 5 })
     println("singleOrNull--返回符合条件的单个元素，如有没有符合或超过一个，返回null:" + list.singleOrNull() { it % 5 == 10 })
 
+    /**
+     * 排序操作
+     */
+    println("reversed--相反顺序:" + list.reversed())
+    println("sorted--自然排序(升序):" + list.sorted())
+    println("sortedBy--根据方法处理结果进行自然(升序)排序:" + list.sortedBy {it % 3})
+    println("sortedDescending--降序排序:" + list.sortedDescending())
+    println("sortedByDescending--根据方法处理结果进行降序排序:" + list.sortedByDescending { it % 3 })
 
 
 
