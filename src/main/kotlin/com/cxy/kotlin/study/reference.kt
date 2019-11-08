@@ -1,6 +1,7 @@
 package com.cxy.kotlin.study
 
 import javafx.scene.shape.Rectangle
+import org.apache.coyote.http11.Constants.a
 
 /**
  * 官网学习
@@ -121,7 +122,103 @@ fun main(args: Array<String>) {
     //创建基本类及其实例
     //val rectangle = Rectangle(5.0, 2.0)
 
+    //创建 DTOs（POJOs/POCOs)
+    //data class Customer(val name: String, val email: String)
+    /**
+    会为 Customer 类提供以下功能：
+    所有属性的 getters （对于 var 定义的还有 setters）
+    equals()
+    hashCode()
+    toString()
+    copy()
+    所有属性的 component1()、 component2()……等等
+     */
 
+    //函数的默认参数
+    // fun foo(a: Int = 0, b: String = "") { …… }
+
+    //过滤 list
+    // val positives = list.filter { x -> x > 0 } 或者 val positives = list.filter { it > 0 }
+
+    //检测元素是否存在于集合中
+    // if ("john@example.com" in emailsList) { …… }
+    // if ("jane@example.com" !in emailsList) { …… }
+
+    //字符串内插
+    // println("Name $name")
+
+    //类型判断
+    // when (x) {
+    //    is Foo //-> ……
+    //    is Bar //-> ……
+    //    else   //-> ……
+    //}
+
+    //遍历 map/pair型list
+    // for ((k, v) in map) {
+    //    println("$k -> $v")
+    //}
+    //k、v 可以改成任意名字
+
+
+    //使用区间
+    //for (i in 1..100) { …… }  // 闭区间：包含 100
+    //for (i in 1 until 100) { …… } // 半开区间：不包含 100
+    //for (x in 2..10 step 2) { …… }
+    //for (x in 10 downTo 1) { …… }
+    //if (x in 1..10) { …… }
+
+    //只读 list
+    //val list = listOf("a", "b", "c")
+
+    //只读 map
+    //val map = mapOf("a" to 1, "b" to 2, "c" to 3)
+
+    //访问 map
+    //println(map["key"])
+    //map["key"] = value
+
+    //延迟属性
+    //val p: String by lazy {
+    //    // 计算该字符串
+    //}
+
+    //扩展函数
+    //fun String.spaceToCamelCase() { …… }
+    //"Convert this to camelcase".spaceToCamelCase()
+
+    //创建单例
+    //object Resource {
+    //    val name = "Name"
+    //}
+
+    //If not null 缩写
+    //val files = File("Test").listFiles()
+    //println(files?.size)
+
+    //If not null and else 缩写
+    //val files = File("Test").listFiles()
+    //println(files?.size ?: "empty")
+
+    //if null 执行一个语句
+    //val values = ……
+    //val email = values["email"] ?: throw IllegalStateException("Email is missing!")
+
+    //在可能会空的集合中取第一元素
+    //val emails = …… // 可能会是空集合
+    //val mainEmail = emails.firstOrNull() ?: ""
+
+    //
+    //
+
+    //
+    //
+
+    //
+    //
+
+    //
+    //
 
 
 
