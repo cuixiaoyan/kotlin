@@ -208,17 +208,125 @@ fun main(args: Array<String>) {
     //val emails = …… // 可能会是空集合
     //val mainEmail = emails.firstOrNull() ?: ""
 
+    //if not null 执行代码
+    //val value = ……
     //
-    //
+    //value?.let {
+    //    …… // 代码会执行到此处, 假如data不为null
+    //}
 
+    //映射可空值（如果非空的话）
+    //val value = ……
     //
-    //
+    //val mapped = value?.let { transformValue(it) } ?: defaultValue
+    //// 如果该值或其转换结果为空，那么返回 defaultValue。
 
-    //
-    //
+    //返回 when 表达式
+    //fun transform(color: String): Int {
+    //    return when (color) {
+    //        "Red" -> 0
+    //        "Green" -> 1
+    //        "Blue" -> 2
+    //        else -> throw IllegalArgumentException("Invalid color param value")
+    //    }
+    //}
 
+    //“try/catch”表达式
+    //fun test() {
+    //    val result = try {
+    //        count()
+    //    } catch (e: ArithmeticException) {
+    //        throw IllegalStateException(e)
+    //    }
     //
+    //    // 使用 result
+    //}
+
+    //“if”表达式
+    //fun foo(param: Int) {
+    //    val result = if (param == 1) {
+    //        "one"
+    //    } else if (param == 2) {
+    //        "two"
+    //    } else {
+    //        "three"
+    //    }
+    //}
+
+    //返回类型为 Unit 的方法的 Builder 风格用法
+    //fun arrayOfMinusOnes(size: Int): IntArray {
+    //    return IntArray(size).apply { fill(-1) }
+    //}
+
+    //单表达式函数
+    //fun theAnswer() = 42
+    //等价于
+    //fun theAnswer(): Int {
+    //    return 42
+    //}
+
+    //单表达式函数与其它惯用法一起使用能简化代码，例如和 when 表达式一起使用：
+    //fun transform(color: String): Int = when (color) {
+    //    "Red" -> 0
+    //    "Green" -> 1
+    //    "Blue" -> 2
+    //    else -> throw IllegalArgumentException("Invalid color param value")
+    //}
+
+    //对一个对象实例调用多个方法 （with）
+    //class Turtle {
+    //    fun penDown()
+    //    fun penUp()
+    //    fun turn(degrees: Double)
+    //    fun forward(pixels: Double)
+    //}
     //
+    //val myTurtle = Turtle()
+    //with(myTurtle) { // 画一个 100 像素的正方形
+    //    penDown()
+    //    for(i in 1..4) {
+    //        forward(100.0)
+    //        turn(90.0)
+    //    }
+    //    penUp()
+    //}
+
+    //配置对象的属性（apply）
+    //val myRectangle = Rectangle().apply {
+    //    length = 4
+    //    breadth = 5
+    //    color = 0xFAFAFA
+    //}
+    //这对于配置未出现在对象构造函数中的属性非常有用。
+
+    //Java 7 的 try with resources
+    //val stream = Files.newInputStream(Paths.get("/some/file.txt"))
+    //stream.buffered().reader().use { reader ->
+    //    println(reader.readText())
+    //}
+
+    //对于需要泛型信息的泛型函数的适宜形式
+    ////  public final class Gson {
+    ////     ……
+    ////     public <T> T fromJson(JsonElement json, Class<T> classOfT) throws JsonSyntaxException {
+    ////     ……
+    //
+    //inline fun <reified T: Any> Gson.fromJson(json: JsonElement): T = this.fromJson(json, T::class.java)
+
+    //使用可空布尔
+    //val b: Boolean? = ……
+    //if (b == true) {
+    //    ……
+    //} else {
+    //    // `b` 是 false 或者 null
+    //}
+
+    //交换两个变量
+    //var a = 1
+    //var b = 2
+    //a = b.also { b = a }
+
+
 
 
 
