@@ -6,17 +6,19 @@ package com.cxy.kotlin.study
 fun main(args: Array<String>) {
 
 
-    //
-    //
+    //Kotlin 中使用关键字 class 声明类
+    //class Invoice { /*……*/ }
 
-    //
-    //
+    //类声明由类名、类头（指定其类型参数、主构造函数等）以及由花括号包围的类体构成。
+    //类头与类体都是可选的； 如果一个类没有类体，可以省略花括号。
+    // class Empty
 
-    //
-    //
+    //在 Kotlin 中的一个类可以有一个主构造函数以及一个或多个次构造函数。主构造函数是类头的一部分：
+    //它跟在类名（与可选的类型参数）后。
+    //class Person constructor(firstName: String) { /*……*/ }
 
-    //
-    //
+    //如果主构造函数没有任何注解或者可见性修饰符，可以省略这个 constructor 关键字。
+    //class Person(firstName: String) { /*……*/ }
 
     //
     //
